@@ -1,0 +1,28 @@
+{% extends "baza.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<form method="POST">
+  <h3 align="center">Zarejestruj się aby móc korzystać z serwisu!</h3>
+  <div class="form-group">
+    <label for="firstName">Nazwa użytkownika</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      name="username"
+      placeholder="Wprowadź nazwę"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password1">Hasło</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Wprowadź hasło"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
