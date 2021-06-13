@@ -1,0 +1,35 @@
+{% extends "baza.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+
+<main role="main" class="center">
+ <div class="starter-template">
+ <br>
+ <h1>Lista pracowników</h1>
+ <table border="1" align="center">
+ <thead>
+ <td>ID</td>
+ <td>IMIE</td>
+ <td>NAZWISKO</td>
+ <td>ADRES</td>
+ </thead>
+ 
+ {% for worker in dane %}
+ <tr>
+ <td>{{worker["id"]}}</td>
+ <td>{{worker["name"]}}</td>
+ <td>{{worker["surname"]}}</td>
+ <td> {{ worker["adres"]}}</td>
+ </tr>
+ {% endfor %}
+ </table>
+ </div>
+ </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+ {% endblock %}

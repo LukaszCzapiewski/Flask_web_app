@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flask projekt - Łukasz Czapiewski 19332</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Dots&display=swap" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="static/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <script src="static/js/angular.min.js"></script>
+  <script src="static/js/controllers.js"></script>
+  </head>
+  <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+            ariaexpanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <div id=”logo”>
+              <img src=static/logoimg.png alt=””>
+            </div>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav ms-auto">
+            <li class="active" class=”btn btn-primary”><a href="/" title="Strona główna"><span
+                  class="glyphicon glyphicon-fire" aria-hidden="true"></span> Strona główna</a></li>
+            <li class=”btn btn-primary”><a href="/sign_up" title="Rejestracja"><span class="glyphicon glyphicon-globe"
+                  aria-hidden="true"></span> Rejestracja</a></li>
+            <li class=”btn btn-primary”><a href="/addrec" title="Dodaj rekord"><span
+                  class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Dodaj rekord </a></li>
+            <li class=”btn btn-primary”><a href="/lista" title="Lista rekordów"><span class="glyphicon glyphicon-bullhorn"
+                  aria-hidden="true"></span> Lista rekordów</a></li>
+            <li class=”btn btn-primary”><a title="/"><span class="glyphicon glyphicon-phone-alt"
+                  aria-hidden="true"></span> Kontakt </a></li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/logout">Zalogowano jako:  {% if username %}
+        {{ username }}
+    {% else %}
+        guest
+    {% endif %} <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <p class="lead">{{tresc}}</p>
+        {% block content %}{% endblock %}
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
